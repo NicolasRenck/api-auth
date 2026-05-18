@@ -1,0 +1,8 @@
+   venv/
+   .env
+   credentials.json
+   frontend/
+   __pycache__/
+   *.pyc
+   staticfiles/
+   .git/
