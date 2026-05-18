@@ -11,9 +11,9 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS=api-auth-bqyh.onrender.com,localhost,127.0.0.1
 
-CSRF_TRUSTED_ORIGINS = ['https://api-auth-y7s7.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['ALLOWED_HOSTS=api-auth-bqyh.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
