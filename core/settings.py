@@ -11,7 +11,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS='api-auth-bqyh.onrender.com,localhost,127.0.0.1'
+ALLOWED_HOSTS=api-auth-bqyh.onrender.com,localhost,127.0.0.1
 
 CSRF_TRUSTED_ORIGINS = ['ALLOWED_HOSTS=api-auth-bqyh.onrender.com']
 
