@@ -13,7 +13,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
 
-CSRF_TRUSTED_ORIGINS = ['ALLOWED_HOSTS=api-auth-bqyh.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://api-auth-bqyh.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
