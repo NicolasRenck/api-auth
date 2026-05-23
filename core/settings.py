@@ -106,3 +106,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+import sys
+
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3', #resolução provisoria pra testes unitarios em banco local
+            'NAME': BASE_DIR / 'test_db.sqlite3',
+        }
+    }

@@ -23,6 +23,34 @@ Desenvolvida com **Django** e **Django REST Framework**.
 
 ---
 
+## Testes
+
+O projeto conta com testes automatizados cobrindo as camadas de **Model** e **API**.
+
+**O que é testado:**
+- Criação e validação do model LogAcesso
+- Registro de usuário — sucesso e username duplicado
+- Login — credenciais corretas e senha errada
+- Endpoints /me/ — GET e PATCH
+- Troca de senha — sucesso e senha incorreta
+- Logout com blacklist de token
+- Isolamento de logs — usuário só vê seus próprios registros
+- Requisições sem autenticação retornam 401
+
+**Como rodar os testes:**
+
+```bash
+python manage.py test 
+```
+
+Resultado esperado:
+```
+Ran 17 tests in 5.168s
+OK
+```
+
+---
+
 ## Como rodar localmente
 
 ### Com Docker (recomendado)
@@ -153,6 +181,7 @@ api-auth/
 │   ├── models.py
 │   ├── serializers.py
 │   ├── views.py
+│   ├── tests.py
 │   └── urls.py
 ├── core/
 │   ├── settings.py
